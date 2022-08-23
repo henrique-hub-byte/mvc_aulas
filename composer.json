@@ -1,0 +1,19 @@
+{
+    "name": "framework",
+    "require": {
+        "php": ">= 7.0"
+    },
+    "authors": [
+        {
+            "name": "Luis Henrique",
+            "email": "luis75henrique75@gmail.com"
+
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+            "App\\": "App/",
+            "FW\\": "vendor/FW/"
+        }
+    }
+}
