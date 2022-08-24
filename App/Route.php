@@ -1,28 +1,24 @@
 <?php
-    /* dado um namespace a classe Route */
-    namespace App;
+/* dado um namespace a classe Route */
 
-    class Route {
-        public function initRoutes(){
+namespace App;
 
-            /* array */
-            $routes['home'] = [
-            'route' => '/',
-            'controller' => 'indexController',
-            'action' => 'index'];
+/* posso utlizar o name dessa forma pois carreguei no arquivo autoload */
+use MF\Init\Bootstrap;
 
-            $routes['sobre_nos'] = [
-                'route' => '/sobre-nos',
-                'controller' => 'indexController',
-                'action' => 'SOBREnOS'
-            ];
+class Route extends Bootstrap
+{
 
-        }
+    protected function initRoutes()
+    {
+        $routes['index'] = ['route' => '/', 'controller' => 'IndexController', 'action' => 'index'];
+        $routes['sobre_nos'] = ['route' => '/sobre_nos', 'controller' => 'IndexController', 'action' => 'sobreNos'];
 
-        /*  */
-        public function getUrl(){
-            return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        }
+        /* recebendo os dados do array */
+        $this->setRoutes($routes);
+
     }
+
+}
 
 ?>

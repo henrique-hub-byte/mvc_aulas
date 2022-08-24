@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Controllers\
-
+/* o name space segue a defininição dos diretorios*/
+namespace App\controller;
 class IndexController {
 
 
