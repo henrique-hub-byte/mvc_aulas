@@ -1,5 +1,8 @@
 <?php
-    require "../vendor/autoload.php";
+
+  ini_set('error_reporting','E_strict');
+
+   require "../vendor/autoload.php";
 
     /* = namespace e a classe */
     $route = new \App\Route;

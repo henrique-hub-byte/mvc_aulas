@@ -31,7 +31,7 @@ abstract class Bootstrap
         /* echo '*******' . $url . '*******'; */
         foreach ($this->getRoutes() as $key => $route) {
             if ($url == $route['route']) {
-                $class = "App\\controller\\" . $route['controller'];
+                $class = "App\\Controller\\" . $route['controller'];
                 $controller = new $class();
 
                 $action = $route['action'];
